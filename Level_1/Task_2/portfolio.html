@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Sanidhi</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  
+  <nav>
+    <div class="nav__logo">SS</div>
+    <ul class="nav__links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <header id="home" class="hero">
+    <div class="hero__content">
+      <h1>Hello, I'm <span>Sanidhi Shinde</span></h1>
+      <p>A passionate <b>Web Developer</b> crafting modern websites & apps.</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+    <div class="hero__img">
+      <img src="assets/profile.png" alt="profile">
+    </div>
+  </header>
+
+  
+  <section id="about" class="about section hidden slide-left">
+    <h2 class="section__title">About Me</h2>
+    <p>
+      I’m a developer who loves turning ideas into real digital products. 
+      With strong skills in design & coding, I create unique, user-friendly experiences.
+    </p>
+    <a href="#" class="btn">Download CV</a>
+  </section>
+
+  
+  <section id="services" class="services section hidden slide-right">
+    <h2 class="section__title">My Services</h2>
+    <div class="service__grid">
+      <div class="card">
+        <i class="ri-window-fill"></i>
+        <h3>Web Design</h3>
+        <p>Responsive, modern, and eye-catching website designs tailored to your brand.</p>
+      </div>
+      <div class="card">
+        <i class="ri-smartphone-line"></i>
+        <h3>App Development</h3>
+        <p>Cross-platform mobile apps with smooth performance and sleek UI.</p>
+      </div>
+      <div class="card">
+        <i class="ri-bar-chart-box-line"></i>
+        <h3>SEO & Marketing</h3>
+        <p>Boost your visibility with optimized SEO strategies and content marketing.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="portfolio" class="portfolio section hidden slide-up">
+    <h2 class="section__title">My Work</h2>
+    <div class="portfolio__grid">
+      <div class="portfolio__item" data-title="E-commerce Website"><img src="assets/project1.png" alt="project"></div>
+      <div class="portfolio__item" data-title="Website"><img src="assets/project2.png" alt="project"></div>
+      <div class="portfolio__item" data-title="Mobile App UI"><img src="assets/project3.png" alt="project"></div>
+      <div class="portfolio__item" data-title="Landing page"><img src="assets/project4.png" alt="project"></div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="contact section hidden fade-in">
+    <h2 class="section__title">Let's Connect</h2>
+    <p>Have an idea? Let’s build it together 🚀</p>
+    <div class="socials">
+      <a href="#"><i class="ri-twitter-fill"></i></a>
+      <a href="#"><i class="ri-linkedin-fill"></i></a>
+      <a href="#"><i class="ri-github-fill"></i></a>
+      <a href="#"><i class="ri-mail-fill"></i></a>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 Sanidhi | All Rights Reserved</p>
+  </footer>
+
+  
+  <script>
+    const sections = document.querySelectorAll('.hidden');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
